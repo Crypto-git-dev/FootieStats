@@ -1,5 +1,21 @@
 # lyrics-search vue.js
 
+
+## Table of Contents
+
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+
+
 This applications have a purpose to study Vuejs and all technologies that front-end developers can use [with responsibility ALWAYS =)].
 If you have any question, please let me touch [tweet me](https://twitter.com/seuzericardo "twitter")
 
@@ -39,23 +55,22 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### External Libraries
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+[Vue.js](https://vuejs.org/)
 [Axios](https://github.com/axios/axios)
-Promise based HTTP client for the browser and node.js (https://github.com/axios/axios)
-
 [Lyrics.ovh](https://lyricsovh.docs.apiary.io/#)
-Simple API to retrieve the lyrics of a song.
-
 [Deezer](https://developers.deezer.com/api)
-Deezer API
-
 [AudD](https://docs.audd.io/)
-Music recongnition API
 
 ### Todo List
 
+####0.2.0
+- Add Vuex
+- Add VueRouter
+- Add PWA Support
+
 ####v1.0.0
 - Create design
-- Development design
+- Development design [CSS Modules ? or other CSS organization]
 - Improve accessibility
 - publish in github pages
 

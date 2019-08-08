@@ -1,6 +1,22 @@
-# lyrics-search vue.js
+# Foot Stats vue.js
 
-This applications have a purpose to study Vuejs and all technologies that front-end developers can use [with responsibility ALWAYS =)].
+## Table of Contents
+
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+
+
+FootieStats have the proporse to show some info using [football-data.org](https://www.football-data.org). This project is for personal use and aims to study Vue.js, Vuex, Vue Router and other technologies.
+
 If you have any question, please let me touch [tweet me](https://twitter.com/seuzericardo "twitter")
 
 ## Project setup
@@ -18,7 +34,7 @@ npm run serve
 npm run build
 ```
 
-###[ Preview build for production](https://cli.vuejs.org/guide/deployment.html#general-guidelines " Preview build for production")
+###[Preview build for production](https://cli.vuejs.org/guide/deployment.html#general-guidelines " Preview build for production")
 ```
 serve -s dist
 ```
@@ -37,38 +53,17 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### External Libraries
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
+[Vue.js](https://vuejs.org/)
 [Axios](https://github.com/axios/axios)
-Promise based HTTP client for the browser and node.js (https://github.com/axios/axios)
-
-[Lyrics.ovh](https://lyricsovh.docs.apiary.io/#)
-Simple API to retrieve the lyrics of a song.
-
-[Deezer](https://developers.deezer.com/api)
-Deezer API
-
-[AudD](https://docs.audd.io/)
-Music recongnition API
+[football-data.org](https://www.football-data.org)
 
 ### Todo List
 
 ####v1.0.0
-- Create design
-- Development design
+- Create design (Based on [Goal.com](Goal.com))
+- Development design [CSS Modules ? or other CSS organization]
 - Improve accessibility
-- publish in github pages
-
-####v1.1.0
-- Show Preview of song
-- Show album info
-- Show Artist Info
-
-####v1.2.0
-- Recognize sound and retrieve lyrics
-- Implement animation effects in components
-
-####v1.3.0
 - Implement PWA
+- publish in github pages
 
 AND MORE!

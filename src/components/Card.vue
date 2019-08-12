@@ -1,42 +1,27 @@
 <template>
-  <div class="card">    
+  <div class="card">
     <div class="songs-list">
-      <div class="songs-item" v-for="song in data" v-bind:key="song.id" v-on:click="selectedLyrics(song.artist.name, song.title)">
-      <div class="content">
-        <a>
-          <div class="picture">
-            <img v-bind:src="song.album.cover_medium" />
-          </div>
+      <div class="songs-item" v-for="competitionItem in data" v-bind:key="competitionItem.id"
+        v-on:click="updateCurrentLeague(competitionItem.code)">
+        <div class="content">
           <div class="text">
-            <h3>{{song.title}}</h3>
-            <h4>{{song.artist.name}} - {{song.album.title}}</h4>            
-          </div>          
-        </a>
-      </div>
+            <h3>{{competitionItem.name}}</h3>
+            <h3>{{competitionItem.area.name}}</h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script>  
   export default {
     name: 'Card',
     props: ['data'],
-    data() {
-      return {
-        showing: 'true',
-        lyrics:{
-          artist: '',
-          track: ''
-        }
-      }
-    },
     methods: {
-      selectedLyrics(artist, track) {
-        this.lyrics.artist = artist;
-        this.lyrics.track = track.replace(' ','%20');
-        this.showing = false;
-        this.$emit('select', artist, track, this.showing);
+      /** Send to store the new value of current League */      
+      updateCurrentLeague(code) {        
+        // this.$store.dispatch('setCurrentCompetition', code);
       }
     },
   }
@@ -65,6 +50,7 @@
 
       .picture {
         padding: 1em;
+
         img {
           border-radius: 50%;
         }

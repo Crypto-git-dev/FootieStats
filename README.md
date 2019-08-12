@@ -1,4 +1,4 @@
-# lyrics-search vue.js
+# football app vue.js
 
 
 ## Table of Contents
@@ -57,9 +57,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 [Vue.js](https://vuejs.org/)
 [Axios](https://github.com/axios/axios)
-[Lyrics.ovh](https://lyricsovh.docs.apiary.io/#)
-[Deezer](https://developers.deezer.com/api)
-[AudD](https://docs.audd.io/)
+[football-data.org](https://www.football-data.org)
 
 ### Todo List
 
@@ -72,18 +70,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - Create design
 - Development design [CSS Modules ? or other CSS organization]
 - Improve accessibility
-- publish in github pages
-
-####v1.1.0
-- Show Preview of song
-- Show album info
-- Show Artist Info
-
-####v1.2.0
-- Recognize sound and retrieve lyrics
-- Implement animation effects in components
-
-####v1.3.0
 - Implement PWA
+- publish in github pages
 
 AND MORE!

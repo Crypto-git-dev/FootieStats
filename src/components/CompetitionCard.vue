@@ -1,13 +1,13 @@
-<template>
-  <div class="lyrics">        
-    <p class="text" v-html="data.lyrics"></p>
+<template v-if="data">
+  <div class="competition">
+    {{data.competition.name}}
   </div>
 </template>
 
 <script>
   export default {
-    name: 'LyricsCard',
-    props: ['data'],
+    name: 'CompetitionCard',
+    props: ['data'],    
   }
 </script>
 

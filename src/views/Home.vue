@@ -1,5 +1,5 @@
 <template>
-  <div id="app">    
+  <div id="app">
     <Card v-bind:data="competitionList" v-if="competitionList"/>    
   </div>
 </template>
@@ -22,7 +22,6 @@
       /** Displaying state data using Vuex */
       ...mapState([
         'competitionList',
-        'currentCompetition'
       ])
     },
   }

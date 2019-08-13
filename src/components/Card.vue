@@ -2,27 +2,30 @@
   <div class="card">
     <div class="songs-list">
       <div class="songs-item" v-for="competitionItem in data" v-bind:key="competitionItem.id"
-        v-on:click="updateCurrentLeague(competitionItem.code)">
-        <div class="content">
-          <div class="text">
-            <h3>{{competitionItem.name}}</h3>
-            <h3>{{competitionItem.area.name}}</h3>
+        v-on:click="$store.commit('SET_CURRENT_COMPETITION', competitionItem.code)">
+        <router-link :to="`/competitions/${competitionItem.name}`">
+          <div class="content">
+            <div class="text">
+              <h3>{{competitionItem.name}}</h3>
+              <h3>{{competitionItem.area.name}}</h3>
+            </div>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
-<script>  
+<script>
   export default {
     name: 'Card',
     props: ['data'],
     methods: {
-      /** Send to store the new value of current League */      
-      updateCurrentLeague(code) {        
-        // this.$store.dispatch('setCurrentCompetition', code);
-      }
+      /** Send to store the new value of current League */
+      updateCurrentLeague(code) {
+        //Dispatch call the function to change state
+        this.$store.dispatch('setCurrentCompetition', code);
+      },
     },
   }
 </script>

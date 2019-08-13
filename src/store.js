@@ -31,11 +31,11 @@ export default new Vuex.Store({
         .catch(response => (this.competitionList = response))
     },
     /** On Click Save the current League that user click */
-    setCurrentCompetition: function (payload) {  
+    setCurrentCompetition: payload => {  
       this.commit('SET_COMPETITION_LIST', payload);
     },
     /** When a user select a specific league return the data of this specific league */
-    loadSelectedCompetition:  code => {
+    loadSelectedCompetition: code => {
       axios({
           headers: {
             'X-Auth-Token': 'e9c6e436a05442488ce54e147180c5c7'
@@ -58,6 +58,6 @@ export default new Vuex.Store({
   },
   /** Getters -> It´s to watch the state */
   getters: {
-
+    currentCompetition: state => state.currentCompetition
   },
 })

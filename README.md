@@ -1,5 +1,4 @@
-# football app vue.js
-
+# FootieStats vue.js
 
 ## Table of Contents
 
@@ -16,7 +15,8 @@
 * [Acknowledgements](#acknowledgements)
 
 
-This applications have a purpose to study Vuejs and all technologies that front-end developers can use [with responsibility ALWAYS =)].
+FootieStats have the proporse to show some info using [football-data.org](https://www.football-data.org). This project is for personal use and aims to study Vue.js, Vuex, Vue Router and other technologies.
+
 If you have any question, please let me touch [tweet me](https://twitter.com/seuzericardo "twitter")
 
 ## Project setup
@@ -34,7 +34,7 @@ npm run serve
 npm run build
 ```
 
-###[ Preview build for production](https://cli.vuejs.org/guide/deployment.html#general-guidelines " Preview build for production")
+###[Preview build for production](https://cli.vuejs.org/guide/deployment.html#general-guidelines " Preview build for production")
 ```
 serve -s dist
 ```
@@ -53,21 +53,14 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### External Libraries
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 [Vue.js](https://vuejs.org/)
 [Axios](https://github.com/axios/axios)
 [football-data.org](https://www.football-data.org)
 
 ### Todo List
 
-####0.2.0
-- Add Vuex
-- Add VueRouter
-- Add PWA Support
-
 ####v1.0.0
-- Create design
+- Create design (Based on [Goal.com](Goal.com))
 - Development design [CSS Modules ? or other CSS organization]
 - Improve accessibility
 - Implement PWA

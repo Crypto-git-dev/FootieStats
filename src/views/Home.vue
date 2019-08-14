@@ -1,5 +1,8 @@
 <template>
-  <div id="app">
+  <div id="home">
+    <div>
+      <a @click="$router.go(-1)">back</a>
+    </div>
     <Card v-bind:data="competitionList" v-if="competitionList"/>    
   </div>
 </template>
@@ -10,7 +13,7 @@
   import { mapState } from 'vuex';
 
   export default {
-    name: 'app',
+    name: 'home',
     components: {      
       Card,
     },    

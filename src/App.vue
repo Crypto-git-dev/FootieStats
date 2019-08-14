@@ -1,5 +1,8 @@
 <template>
-  <div id="app">    
+  <div id="app">
+    <div>
+      <router-link to="/live">LIVE</router-link>      
+    </div>
     <router-view/>
   </div>
 </template>

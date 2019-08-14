@@ -1,16 +1,14 @@
 <template>
   <div class="card">
-    <div class="songs-list">
+    <div class="songs-list">      
       <div class="songs-item" v-for="competitionItem in data" v-bind:key="competitionItem.id"
         v-on:click="$store.commit('SET_CURRENT_COMPETITION', competitionItem.code)">
-        <router-link :to="`/competitions/${competitionItem.name}`">
-          <div class="content">
-            <div class="text">
-              <h3>{{competitionItem.name}}</h3>
-              <h3>{{competitionItem.area.name}}</h3>
-            </div>
+        <div class="content">
+          <div class="text">
+            <h3>{{competitionItem.name}}</h3>
+            <h3>{{competitionItem.area.name}}</h3>
           </div>
-        </router-link>
+        </div>
       </div>
     </div>
   </div>

@@ -71,7 +71,7 @@ export default new Vuex.Store({
       state.currentCompetition = data;
     },
     SET_TODAY_MATCHES_LIST(state, data) {
-      state.competitionList = data;
+      state.todaysMatches = data;
     },
   },
   /** Getters -> It´s to watch the state */

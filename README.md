@@ -9,13 +9,11 @@
   * [Installation](#installation)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
 
 FootieStats have the proporse to show some info using [football-data.org](https://www.football-data.org). This project is for personal use and aims to study Vue.js, Vuex, Vue Router and other technologies.
+You can see this application live on [foot-stats.netlify.com](https://foot-stats.netlify.com).
 
 If you have any question, please let me touch [tweet me](https://twitter.com/seuzericardo "twitter")
 
@@ -56,6 +54,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 [Vue.js](https://vuejs.org/)
 [Axios](https://github.com/axios/axios)
 [football-data.org](https://www.football-data.org)
+[Vuetify](https://vuetifyjs.com/)
 
 ### Todo List
 

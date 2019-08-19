@@ -1,9 +1,6 @@
 <template>
   <div id="home">
-    <div>
-      <a @click="$router.go(-1)">back</a>
-    </div>
-    <Card v-bind:data="competitionList" v-if="competitionList"/>    
+    <Card v-bind:data="competitionList" v-if="competitionList"/>
   </div>
 </template>
 
@@ -18,7 +15,7 @@
       Card,
     },    
     mounted() {
-      /** Call the function which make API call and commit the mutation */
+      /** Call the function which make API call and commit the mutation */      
       this.$store.dispatch('loadCompetitionList');
     },    
     computed: {

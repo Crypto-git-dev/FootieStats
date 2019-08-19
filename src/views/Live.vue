@@ -1,18 +1,24 @@
 <template>
   <div class="live">
-    <a @click="$router.go(-1)">back</a> 
-    <div v-for="item in todaysMatches" :key="item">
-      <p>COMPETITION NAME: {{item.competition.name}}</p>
-      <p>SCORE: {{item.homeTeam.name}} {{item.score.fullTime.homeTeam}} - {{item.score.fullTime.homeTeam}} {{item.awayTeam.name}}</p>
-    </div>    
+    <v-flex d-flex>
+      <v-layout wrap>
+        <v-flex xs4 v-for="item in todaysMatches" :key="item.id">
+          <v-card class="ma-4" v-on:click="$store.commit('SET_CURRENT_COMPETITION', competitionItem.code)">
+            <v-card-title>{{item.competition.name}}</v-card-title>
+            <v-card-text>{{item.homeTeam.name}} {{item.score.fullTime.homeTeam}} - {{item.score.fullTime.homeTeam}}
+              {{item.awayTeam.name}}</v-card-text>
+            <v-card-text v-html="toUserDate(item.utcDate)"></v-card-text>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-flex>
   </div>
 </template>
 
-matches[2].homeTeam.name
-
-
 <script>
-  import { mapState } from 'vuex';
+  import {
+    mapState
+  } from 'vuex';
 
   export default {
     name: 'live',
@@ -25,6 +31,12 @@ matches[2].homeTeam.name
       ...mapState([
         'todaysMatches',
       ])
+    },
+    methods: {
+      toUserDate(utc) {
+        const d = new Date(utc);
+        return d.toLocaleString();
+      }
     },
   }
 </script>

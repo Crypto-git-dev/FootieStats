@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.fb0f2a850353c404d286ff3ec21749c2.js"
+  "/precache-manifest.47ee53350c1e50f70d16b61943df3de0.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "lyrics-search"});

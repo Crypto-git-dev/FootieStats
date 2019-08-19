@@ -16,6 +16,7 @@
 
 
 FootieStats have the proporse to show some info using [football-data.org](https://www.football-data.org). This project is for personal use and aims to study Vue.js, Vuex, Vue Router and other technologies.
+You can see this application live on [foot-stats.netlify.com](https://foot-stats.netlify.com).
 
 If you have any question, please let me touch [tweet me](https://twitter.com/seuzericardo "twitter")
 

@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.47ee53350c1e50f70d16b61943df3de0.js"
+  "/precache-manifest.8b0291a3563458f79205b41c9c6b6734.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "lyrics-search"});
+workbox.core.setCacheNameDetails({prefix: "foot-stats"});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to

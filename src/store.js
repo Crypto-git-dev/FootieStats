@@ -21,7 +21,7 @@ export default new Vuex.Store({
             'X-Auth-Token': 'e9c6e436a05442488ce54e147180c5c7'
           },
           method: 'get',
-          url: 'http://api.football-data.org/v2/competitions',
+          url: 'https://api.football-data.org/v2/competitions',
         })
         .then(response => (this.competitionList = response.data.competitions.filter((item) => {
           return item.plan == 'TIER_ONE'
@@ -42,7 +42,7 @@ export default new Vuex.Store({
             'X-Auth-Token': 'e9c6e436a05442488ce54e147180c5c7'
           },
           method: 'get',
-          url: `http://api.football-data.org/v2/competitions/${code}/standings`,
+          url: `https://api.football-data.org/v2/competitions/${code}/standings`,
         })
         .then(response => this.competitionCode = response.data)
         .catch(response => (this.competitionCode = response.data))

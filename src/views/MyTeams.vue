@@ -73,7 +73,7 @@
             'X-Auth-Token': 'e9c6e436a05442488ce54e147180c5c7'
           },
           method: 'get',
-          url: `http://api.football-data.org/v2/competitions/${id}/standings`,
+          url: `https://api.football-data.org/v2/competitions/${id}/standings`,
         })
         .then(response => {this.league = response.data})
         .catch(response => (this.league = response))    

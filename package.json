@@ -1,7 +1,10 @@
 {
-  "name": "lyrics-search",
+  "name": "foot-stats",
   "version": "0.1.0",
   "private": true,
+  "description": "Your soccer application based on Vue.js",
+  "author": "Ricardo Carvalho <jstmotta@gmail.com>",
+  "homepage": "https://github.com/SeuZeRicardo/football-vue",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

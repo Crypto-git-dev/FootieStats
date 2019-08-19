@@ -1,4 +1,4 @@
-# Foot Stats vue.js
+# FootieStats vue.js
 
 ## Table of Contents
 

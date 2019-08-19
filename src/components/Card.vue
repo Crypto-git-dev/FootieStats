@@ -1,17 +1,11 @@
 <template>
-  <div class="card">
-    <div class="songs-list">      
-      <div class="songs-item" v-for="competitionItem in data" v-bind:key="competitionItem.id"
-        v-on:click="$store.commit('SET_CURRENT_COMPETITION', competitionItem.code)">
-        <div class="content">
-          <div class="text">
-            <h3>{{competitionItem.name}}</h3>
-            <h3>{{competitionItem.area.name}}</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="league-list">
+    <v-card class="league-item" v-for="competitionItem in data" v-bind:key="competitionItem.id"
+      v-on:click="$store.commit('SET_CURRENT_COMPETITION', competitionItem.code)" cols="auto">
+      <v-card-title>{{competitionItem.name}}</v-card-title>
+      <v-card-text>{{competitionItem.area.name}}</v-card-text>
+    </v-card>
+  </div>  
 </template>
 
 <script>

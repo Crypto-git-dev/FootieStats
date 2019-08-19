@@ -57,6 +57,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 [Vue.js](https://vuejs.org/)
 [Axios](https://github.com/axios/axios)
 [football-data.org](https://www.football-data.org)
+[Vuetify](https://vuetifyjs.com/)
 
 ### Todo List
 

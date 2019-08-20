@@ -1,7 +1,7 @@
 <template>
   <!-- APP BAR [BAR TOP] -->
   <v-app id="app">
-    <v-toolbar color="green" dark>
+    <v-toolbar color="green" dark max-height="64">
       <v-toolbar-title>
         Foot Stats
       </v-toolbar-title>
@@ -10,7 +10,7 @@
 
       <v-toolbar-items>
         <v-btn text>
-          <router-link class="white--text" to="/Home">Home</router-link>
+          <router-link class="white--text" to="/">Home</router-link>
         </v-btn>
         <v-btn text>
           <router-link class="white--text" to="/live">LIVE</router-link>
@@ -27,8 +27,8 @@
       </v-container>
     </v-content>
     <!--- FOOTER-->
-    <v-footer color="green" app>
-      <span class="white--text">&copy; 2019</span>
+    <v-footer color="green">
+      <span class="text-center white--text">Foot Stats &copy; 2019</span>
     </v-footer>
   </v-app>
 </template>

@@ -8,8 +8,7 @@ export default new Vuex.Store({
   state: {
     competitionList: null,
     currentCompetition: null,
-    todaysMatches: '',
-    loadingApiData: false
+    todaysMatches: '',    
   },
   /** Actions -> It´s to commit mutations
    * [commit] serve to change state data
@@ -17,7 +16,6 @@ export default new Vuex.Store({
   actions: {
     /** Get all competition List Avaliable */
     loadCompetitionList: function () {
-      this.loadingApiData = true;
       axios({
           headers: {
             'X-Auth-Token': 'e9c6e436a05442488ce54e147180c5c7'
@@ -26,14 +24,13 @@ export default new Vuex.Store({
           url: 'https://api.football-data.org/v2/competitions',
         })
         .then(response => (this.competitionList = response.data.competitions.filter((item) => {
-          return item.plan == 'TIER_ONE'
-        })))
+            return item.plan == 'TIER_ONE'
+          })))
         .then(competitionList => {
           this.commit('SET_COMPETITION_LIST', competitionList);
         })
         .catch(response => (this.competitionList = response))
-      this.loadingApiData = false;
-    },    
+    },
     /** On Click Save the current League that user click */
     setCurrentCompetition: payload => {
       this.commit('SET_COMPETITION_LIST', payload);

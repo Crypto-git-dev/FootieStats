@@ -1,10 +1,6 @@
 <template>
   <div id="home">
-    <div>
-      <a @click="$router.go(-1)">back</a>
-    </div>
-    <span class="mdi mdi-loading spin" v-show="loadingApiData"></span>
-    <Card v-bind:data="competitionList" v-if="competitionList"/>    
+    <Card v-bind:data="competitionList" v-if="competitionList"/>
   </div>
 </template>
 
@@ -26,7 +22,6 @@
       /** Displaying state data using Vuex */
       ...mapState([
         'competitionList',
-        'loadingApiData'
       ])
     },
   }

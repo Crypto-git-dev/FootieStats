@@ -18,8 +18,8 @@
         <v-btn text>
           <router-link class="white--text" to="/myteams">My Teams</router-link>
         </v-btn>
-      </v-toolbar-items>    
-    </v-toolbar>    
+      </v-toolbar-items>
+    </v-toolbar>
     <!-- MAIN CONTENT -->
     <v-content>
       <v-container>
@@ -28,7 +28,15 @@
     </v-content>
     <!--- FOOTER-->
     <v-footer color="green">
-      <span class="text-center white--text">Foot Stats &copy; 2019</span>
+      <p class="white--text text-center">Copyright &copy; 2019 foot-stats.netlify.com all right reserved. All informations showing
+        in this site are provided by the <a class="white--text" href="https://www.football-data.org">Football-Data.org
+          API</a></p>
     </v-footer>
   </v-app>
 </template>
+
+<style lang="scss">
+  footer {
+    width: 100%;
+  }
+</style>

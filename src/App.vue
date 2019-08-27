@@ -1,25 +1,7 @@
 <template>
   <!-- APP BAR [BAR TOP] -->
   <v-app id="app">
-    <v-toolbar color="green" dark max-height="64">
-      <v-toolbar-title>
-        Foot Stats
-      </v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-toolbar-items>
-        <v-btn text>
-          <router-link class="white--text" to="/">Home</router-link>
-        </v-btn>
-        <v-btn text>
-          <router-link class="white--text" to="/live">LIVE</router-link>
-        </v-btn>
-        <v-btn text>
-          <router-link class="white--text" to="/myteams">My Teams</router-link>
-        </v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
+    <Menu />    
     <!-- MAIN CONTENT -->
     <v-content>
       <v-container>
@@ -34,6 +16,16 @@
     </v-footer>
   </v-app>
 </template>
+
+<script>
+import Menu from '@/components/Menu';
+
+export default {
+  components: {
+    Menu,
+  }
+}
+</script>
 
 <style lang="scss">
   footer {

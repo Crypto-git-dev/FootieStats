@@ -1,11 +1,11 @@
 <template>
   <div id="home">
-    <Card v-bind:data="competitionList" v-if="competitionList"/>
+    <Card v-bind:data="competitionList" v-if="competitionList"/>    
   </div>
 </template>
 
 <script>
-  import Card from '@/components/Card';  
+  import Card from '@/components/Card';
 
   import { mapState } from 'vuex';
 

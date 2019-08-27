@@ -14,28 +14,79 @@
       <v-card class="mx-auto" max-width="700">
         <v-card-title>{{league.competition.name}}</v-card-title>
         <v-card-text>{{league.season.startDate}} - {{league.season.endDate}}</v-card-text>
-        <v-simple-table>
+        <v-simple-table id="league-table" fixed-header>
           <thead>
             <tr>
-              <td>Position</td>
-              <td>Club</td>
-              <td>Points</td>
-              <td>Matches</td>
-              <td>Wins</td>
-              <td>Draws</td>
-              <td>Loss</td>
+              <td>
+                <v-tooltip top>
+                  <template v-slot:activator="{ on }">
+                    <span v-on="on" class="md-pa-2 xs-pl-2 mx-auto header stats-num">P</span>
+                  </template>        
+                  <span>Position</span>
+                </v-tooltip>
+              </td>
+              <td>
+                <v-tooltip top>
+                  <template v-slot:activator="{ on }">
+                    <span v-on="on" class="md-pa-2 xs-pl-2 mx-auto header ">C</span>
+                  </template>        
+                  <span>Club Name</span>
+                </v-tooltip>
+              </td>
+              <td>
+                <v-tooltip top>
+                  <template v-slot:activator="{ on }">
+                    <span v-on="on" class="md-pa-2 xs-pl-2 mx-auto header stats-num">P</span>
+                  </template>        
+                  <span>Points</span>
+                </v-tooltip>
+              </td>
+              <td>
+                <v-tooltip top>
+                  <template v-slot:activator="{ on }">
+                    <span v-on="on" class="md-pa-2 xs-pl-2 mx-auto header stats-num">M</span>
+                  </template>        
+                  <span>Matches</span>
+                </v-tooltip>
+              </td>
+              <td>
+                <v-tooltip top>
+                  <template v-slot:activator="{ on }">
+                    <span v-on="on" class="md-pa-2 xs-pl-2 mx-auto header stats-num">W</span>
+                  </template>        
+                  <span>Wins</span>
+                </v-tooltip>
+              </td>
+              <td>
+                <v-tooltip top>
+                  <template v-slot:activator="{ on }">
+                    <span v-on="on" class="md-pa-2 xs-pl-2 mx-auto header stats-num">D</span>
+                  </template>        
+                  <span>Draws</span>
+                </v-tooltip>
+              </td>
+              <td>
+                <v-tooltip top>
+                  <template v-slot:activator="{ on }">
+                    <span v-on="on" class="md-pa-2 xs-pl-2 mx-autoheader stats-num">L</span>
+                  </template>        
+                  <span>Loss</span>
+                </v-tooltip>
+              </td>
             </tr>
           </thead>
-          <tbody v-for="data in league.standings[0].table" :key="data.code">
-            <td>{{data.position}}</td>
-            <td>{{data.team.name}}</td>
-            <td>{{data.points}}</td>
-            <td>{{data.playedGames}}</td>
-            <td>{{data.won}}</td>
-            <td>{{data.draw}}</td>
-            <td>{{data.lost}}</td>            
+          <tbody>
+            <tr v-for="data in teamTables" :key="data.code">
+              <td class="pa-2 teams stats-num">{{data.position}}</td>
+              <td class="pa-2 teams stats-word">{{data.team.name}}</td>
+              <td class="pa-2 teams stats-num">{{data.points}}</td>
+              <td class="pa-2 teams stats-num">{{data.playedGames}}</td>
+              <td class="pa-2 teams stats-num">{{data.won}}</td>
+              <td class="pa-2 teams stats-num">{{data.draw}}</td>
+              <td class="pa-2 teams stats-num">{{data.lost}}</td>
+            </tr>
           </tbody>
-        </v-simple-table>                
+        </v-simple-table>
       </v-card>
     </div>
 
@@ -86,7 +137,37 @@
       /** Displaying state data using Vuex */
       ...mapState([
         'competitionList',
-      ])
+      ]),
+      teamTables: function () {
+        const rawItens = this.league.standings[0].table;
+
+        //Run every item in array
+        rawItens.forEach(element => {
+          //Regex to remove number and all two words in uppercase
+          let filteredName = element.team.name.replace(/[0-9]/g, '').replace(/\w*[A-Z]\w*[A-Z]\w*/g, '');
+          element.team.name = filteredName;
+        });
+        return rawItens;
+      }
     },
   }
 </script>
+
+<style lang="scss" scoped>
+#league-table {
+  td {
+    text-transform: uppercase;
+  }
+
+  .header {
+    font-weight: 700;
+  }
+
+  @media (max-width: 600px) {
+    .stats-word {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}  
+</style>

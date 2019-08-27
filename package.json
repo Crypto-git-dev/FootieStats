@@ -1,6 +1,6 @@
 {
   "name": "foot-stats",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Your soccer application based on Vue.js",
   "author": "Ricardo Carvalho <jstmotta@gmail.com>",

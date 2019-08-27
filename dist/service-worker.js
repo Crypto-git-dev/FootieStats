@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.8b0291a3563458f79205b41c9c6b6734.js"
+  "/precache-manifest.91c9be54d29854a31f10bcf7cabceb23.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "foot-stats"});

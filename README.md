@@ -1,6 +1,9 @@
 # FootieStats vue.js
 
+
 ## Table of Contents
+
+
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
